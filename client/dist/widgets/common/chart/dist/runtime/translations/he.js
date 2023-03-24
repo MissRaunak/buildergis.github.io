@@ -1,0 +1,1 @@
+System.register([],(function(t){return{execute:function(){t({_widgetLabel:"תרשים",datalimitedTip:"תרשימי עמודות או טורים מוגבלים לעד 1,000 עמודות. סנן או צבור את הנתונים שלך מחדש ונסה שוב.",pieDatalimitedTip:"לא ניתן לעבד, קטגוריות רבות מדי. תרשים עוגה מוגבל ל-300 קטגוריות לכל היותר.",dataEmptyTip:"לא נמצאו נתונים."})}}}));

@@ -1,0 +1,93 @@
+/// <reference types="jest" />
+import { LayerTypes } from 'jimu-arcgis/arcgis-data-source';
+export declare function mockJSAPIClass(properties?: {}): jest.Mock<any, any>;
+declare class MockAPIAccessor {
+    constructor(options?: {});
+    watch(): void;
+}
+export declare class MockAPICollection<T> {
+    arr: T[];
+    constructor(arr: T[]);
+    get length(): number;
+    getItemAt(i: any): T;
+    toArray(): T[];
+    concat(clt: MockAPICollection<T>): MockAPICollection<T>;
+    add(item: any, index: any): void;
+}
+export declare class MockAPILayer extends MockAPIAccessor {
+    id: string;
+    parent: MockAPILayer;
+    load(): Promise<void>;
+    on(): void;
+}
+export declare class MockFeatureLayer extends MockAPILayer {
+    type: LayerTypes;
+    declaredClass: string;
+    fields: any[];
+    queryFeatures(): Promise<{
+        features: any[];
+        fields: any[];
+    }>;
+}
+export declare class MockCommonMapServiceLayer extends MockAPILayer {
+    sublayers: MockAPICollection<MockSubLayer>;
+    constructor(options?: {});
+    get allSublayers(): MockAPICollection<any>;
+    loadAll(): Promise<void>;
+}
+export declare class MockTileLayer extends MockCommonMapServiceLayer {
+    type: LayerTypes;
+    declaredClass: string;
+}
+export declare class MockMapImageLayer extends MockCommonMapServiceLayer {
+    type: LayerTypes;
+    declaredClass: string;
+}
+export declare class MockSubLayer extends MockAPIAccessor {
+    layer: MockCommonMapServiceLayer;
+    parent: MockSubLayer | MockAPILayer;
+    declaredClass: string;
+    fields: any[];
+    sublayers: MockAPICollection<MockSubLayer>;
+    constructor(options?: {});
+    load(): Promise<void>;
+}
+export declare class MockGroupLayer extends MockAPILayer {
+    type: LayerTypes;
+    layers: MockAPICollection<MockAPILayer>;
+    declaredClass: string;
+    constructor(options?: {});
+    get allLayers(): MockAPICollection<any>;
+    loadAll(): Promise<void>;
+}
+export declare class MockMap extends MockAPIAccessor {
+    id: string;
+    layers: MockAPICollection<MockAPILayer>;
+    constructor(options?: {});
+    get allLayers(): MockAPICollection<any>;
+    add(layer: any, index: any): void;
+}
+export declare class MockWebMap extends MockMap {
+    when(callback?: any, errback?: any): Promise<void>;
+}
+export declare class MockView extends MockAPIAccessor {
+    map: MockMap;
+    popup: MockPopup;
+    constructor(options?: {});
+    whenLayerView(layer: MockAPILayer): Promise<{}>;
+    when(callback?: any, errback?: any): Promise<void>;
+    on(): void;
+    destroy(): void;
+}
+export declare class MockMapView extends MockView {
+}
+export declare class MockSceneView extends MockView {
+}
+export declare class MockLayerView extends MockAPIAccessor {
+    layer: MockAPILayer;
+}
+export declare class MockFeatureLayerView extends MockLayerView {
+}
+export declare class MockPopup extends MockAPIAccessor {
+}
+export {};

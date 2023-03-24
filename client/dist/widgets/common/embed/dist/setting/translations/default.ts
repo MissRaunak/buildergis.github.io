@@ -1,0 +1,20 @@
+export default {
+  _widgetLabel: 'Embed',
+  websiteAddress: 'Website address',
+  code: 'Code',
+  codePlaceholder: 'Paste the HTML code you want to embed.',
+  embedBy: 'Embed by',
+  attributeHint: 'URL from an attribute',
+  expressionHint: 'URL by an expression',
+  autoRefresh: 'Auto refresh',
+  autoInterval: 'Interval',
+  autoUnit: 'Minute',
+  reloadSetting: 'Do not reload iframe when URL changes',
+  maxLimit: 'Maximum character limit exceeded.',
+  restrictWarningTitle: 'Change is coming!',
+  restrictWarningTips: 'The Embed by Code feature will be restricted soon to support only limited HTML formats in newly created apps. We recommend hosting your website on a server and using Embed by URL directly. For more details, see {restrictBlogLinkTag}this blog{restrictBlogLinkTag}.',
+  codeWarningTitle: 'This embedded HTML code will go out of support soon.',
+  codeWarningTips: 'Please change to one of the {codeSupportedLinkTag}supported HTML formats{codeSupportedLinkTag} as soon as possible or host your website on a server and use Embed by URL directly.',
+  moreDetails: 'Check more details on the supported HTML formats {detailsFormatLinkTag}here{detailsFormatLinkTag}.',
+  unsupportedAlert: 'Unsupported HTML format. Please try again.'
+}

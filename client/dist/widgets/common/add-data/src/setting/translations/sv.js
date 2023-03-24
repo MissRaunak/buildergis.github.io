@@ -1,0 +1,1 @@
+System.register([],(function(t){return{execute:function(){t({wayOfAddingData:"Sätt att lägga till data",selectFromAccount:"Välj från konto",inputUrl:"Indata-URL",uploadFiles:"Överför filer",emptyListMessage:"Tomt listmeddelande",defaultPlaceholderText:"Det finns för närvarande inga infogade data."})}}}));
