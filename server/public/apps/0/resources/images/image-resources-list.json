@@ -1,0 +1,27 @@
+{
+  "1679737614921": {
+    "originalName": "gis.png",
+    "fileName": "1679737614921.png",
+    "size": 95916,
+    "url": "${appResourceUrl}/images/widget_25/1679737614921.png",
+    "created": 1679737614921,
+    "resourcesPrefix": "images/widget_25",
+    "referedIds": [
+      "1679737659260"
+    ],
+    "originId": "1679737614921",
+    "fileFormat": "image/png",
+    "isUseCompress": false,
+    "originalWidth": 1600,
+    "originalHeight": 591
+  },
+  "1679737659260": {
+    "file": {},
+    "fileName": "1679737659260.jpeg",
+    "url": "${appResourceUrl}/images/templates/1679737659260.jpeg",
+    "referedIds": [],
+    "fileFormat": "image/jpeg",
+    "originId": "1679737614921",
+    "resourcesPrefix": "images/templates"
+  }
+}
